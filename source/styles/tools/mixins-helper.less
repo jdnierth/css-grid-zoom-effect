@@ -1,0 +1,51 @@
+// Mixins
+// --------------------------------------------------
+
+// Font sizing using REM
+.font-size(@font-size:16) {
+  @rem: (@font-size / 10);
+  font-size: ~"@{rem}rem";
+}
+
+// Placeholder text
+// Example call :
+// .placeholder-custom-properties({color: @color-black, font-family: @font-mucho-sans-italic;});
+.placeholder-custom-properties(@rules) {
+  &:-moz-placeholder { @rules();
+  }
+  &::-moz-placeholder { @rules();
+  }
+  &:-ms-input-placeholder { @rules();
+  }
+  &::-webkit-input-placeholder {@rules();
+  }
+}
+
+//
+// CENTER ITEM HORIZONTALLY AND VERTICALLY
+// ----------------------------------------------
+.center-item-vertically-and-horizontally() {
+  .translate(-50%, -50%);
+  left: 50%;
+  position: absolute;
+  top: 50%;
+}
+
+.rotate3d(@x; @y; @z; @deg) {
+  -webkit-transform: rotate3d(@x, @y, @z, @deg);
+  transform: rotate3d(@x, @y, @z, @deg);
+}
+
+.rotateSkewY(@rotate; @skew) {
+  -webkit-transform: rotate(@rotate) skewY(@skew);
+  -ms-transform: rotate(@rotate) skewY(@skew); // IE9 only
+  -o-transform: rotate(@rotate) skewY(@skew);
+  transform: rotate(@rotate) skewY(@skew);
+}
+
+.skewyRotate(@rotate; @skew) {
+  -webkit-transform: skewY(@skew) rotate(@rotate);
+  -ms-transform: skewY(@skew) rotate(@rotate); // IE9 only
+  -o-transform: skewY(@skew) rotate(@rotate);
+  transform: skewY(@skew) rotate(@rotate);
+}

@@ -1,0 +1,31 @@
+.flex-grid {
+  &:extend(.flex-box);
+  &:extend(.flex-do-wrap);
+}
+
+.flex-grid--item {
+  background-color: #E8117F;
+  overflow: hidden; // used to hide the image on zoom.
+  width: 49.5%;
+
+  img {
+    .transition(all .5s);
+
+    &:hover,
+    &:focus {
+      transform: scale(1.2);
+    }
+  }
+}
+
+.flex-grid--image {
+  .display-flex();
+  .justify-content(center); // align horizontal
+  .align-items(center); // align vertical
+  .flex-direction(column);
+}
+
+.flex-grid-item--content {
+  color: #fff;
+  padding: 50px;
+}

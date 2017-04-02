@@ -1,0 +1,94 @@
+// HELPERS
+// This file is for declaring classes that can be used in conjunction with :extend()
+// --------------------------------------------------
+.global-transition {
+  .transition(@global-transition);
+}
+
+.global-transition-color {
+  .transition(color @global-transition-animation @global-transition-time);
+}
+
+.global-fast-transition {
+  .transition(all @global-transition-animation @global-transition-time-fast);
+}
+
+.global-slow-transition {
+  .transition(all @global-transition-animation @global-transition-time-slow);
+}
+
+.flex-inline-box {
+  .display-flex(inline);
+}
+
+.flex-box {
+  .display-flex();
+}
+
+.flex-column {
+  .flex-direction(column);
+}
+
+.flex-row {
+  .flex-direction(row);
+}
+
+.flex-do-wrap {
+  .flex-wrap(wrap);
+}
+
+.flex-no-wrap {
+  .flex-wrap(nowrap);
+}
+
+.flex-grow-yes {
+  .flex-grow(1);
+}
+
+.flex-grow-no {
+  .flex-grow(0);
+}
+
+.flex-shrink-no {
+  .flex-shrink(0);
+}
+
+.flex-shrink-yes {
+  .flex-shrink(1);
+}
+
+.align-center {
+  .align-items(center);
+}
+
+.align-end {
+  .align-items(flex-end);
+}
+
+.justify-center {
+  .justify-content(center);
+}
+
+.justify-start {
+  .justify-content(flex-start);
+}
+
+.justify-end {
+  .justify-content(flex-end);
+}
+
+.justify-between {
+  .justify-content(space-between);
+}
+
+.list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.vertical-center {
+  .translateY(-50%);
+  position: absolute;
+  top: 50%;
+}
