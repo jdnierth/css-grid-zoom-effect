@@ -1,14 +1,13 @@
 .flex-grid {
-  @flex-grix-bg-color: #E8117F;
-  @flex-grix-bg-color: #000;
+  @flex-grid-bg-color: #000;
 
   &:extend(.flex-box);
   &:extend(.flex-do-wrap);
 
   .flex-grid--item {
     .flex-basis(100%);
-    .flex-order(2);
-    background-color: @flex-grix-bg-color;
+    .flex-order(2);   // Only needed where image is listed 2nd on desktop and needs to be listed first on mobile
+    background-color: @flex-grid-bg-color;
     overflow: hidden; // used to hide the image on zoom.
 
     img {
@@ -22,10 +21,10 @@
   }
 
   .flex-grid--image {
-    .display-flex();
-    .justify-content(center); // align horizontal
     .align-items(center); // align vertical
+    .display-flex();
     .flex-direction(column);
+    .justify-content(center); // align horizontal
   }
 
   .flex-grid-item--content {
@@ -34,7 +33,7 @@
   }
 
   .first-on-mobile {
-    .flex-order(1);
+    .flex-order(1); // Only needed where image is listed 2nd on desktop and needs to be listed first on mobile
   }
 }
 
@@ -42,7 +41,8 @@
   .flex-grid {
     .flex-grid--item {
       .flex-basis(49%);
-      .flex-order(1); // flex order initial doesn't work in IE. 
+      .flex-order(1); // Only needed where image is listed 2nd on desktop and needs to be listed first on mobile
+                      // flex order initial doesn't work in IE.
     }
   }
 }
