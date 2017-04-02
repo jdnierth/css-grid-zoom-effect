@@ -20,8 +20,9 @@
     <h2>Research - Tranformation</h2>
     - usage of transform will make use of hardware acceleration which will make the animation look smooth
 
+    <!-- flex-grid only needed 'per row on desktop' if image needs to be listed first on mobile -->
     <div class="flex-grid">
-        <div class="flex-grid--item flex-grid--content">
+        <div class="flex-grid--item">
             <div class="flex-grid-item--content">
                 <h2>Flex grid item</h2>
                 <p>
@@ -30,10 +31,12 @@
             </div>
         </div>
 
-        <div class="flex-grid--item flex-grid--image">
+        <div class="flex-grid--item flex-grid--image first-on-mobile">
             <img src="https://placehold.it/1250x350/E8117F/ffffff" alt="Item">
         </div>
+    </div>
 
+    <div class="flex-grid">
         <div class="flex-grid--item flex-grid--image">
             <img src="https://placehold.it/350x350/E8117F/ffffff" alt="Item">
         </div>
@@ -46,12 +49,27 @@
                 </p>
             </div>
         </div>
+    </div>
+
+    <div class="flex-grid">
+        <div class="flex-grid--item second-on-mobile">
+            <div class="flex-grid-item--content">
+                <h2>Flex grid item</h2>
+                <p>
+                    Flex grid item 3
+                </p>
+            </div>
+        </div>
+
+        <div class="flex-grid--item flex-grid--image first-on-mobile">
+            <img src="https://placehold.it/1250x350/E8117F/ffffff" alt="Item">
+        </div>
 
         <div class="flex-grid--item">
             <div class="flex-grid-item--content">
                 <h2>Flex grid item</h2>
                 <p>
-                    Flex grid item 3
+                    Flex grid item 4
                 </p>
             </div>
         </div>

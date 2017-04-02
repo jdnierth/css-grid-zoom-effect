@@ -1,31 +1,48 @@
 .flex-grid {
+  @flex-grix-bg-color: #E8117F;
+  @flex-grix-bg-color: #000;
+
   &:extend(.flex-box);
   &:extend(.flex-do-wrap);
-}
 
-.flex-grid--item {
-  background-color: #E8117F;
-  overflow: hidden; // used to hide the image on zoom.
-  width: 49.5%;
+  .flex-grid--item {
+    .flex-basis(100%);
+    background-color: @flex-grix-bg-color;
+    overflow: hidden; // used to hide the image on zoom.
+    order: 2;
 
-  img {
-    .transition(all .5s);
+    img {
+      .transition(all .5s);
 
-    &:hover,
-    &:focus {
-      transform: scale(1.2);
+      &:hover,
+      &:focus {
+        transform: scale(1.2);
+      }
     }
+  }
+
+  .flex-grid--image {
+    .display-flex();
+    .justify-content(center); // align horizontal
+    .align-items(center); // align vertical
+    .flex-direction(column);
+  }
+
+  .flex-grid-item--content {
+    color: #fff;
+    padding: 50px;
+  }
+
+  .first-on-mobile {
+    order: 1;
   }
 }
 
-.flex-grid--image {
-  .display-flex();
-  .justify-content(center); // align horizontal
-  .align-items(center); // align vertical
-  .flex-direction(column);
-}
-
-.flex-grid-item--content {
-  color: #fff;
-  padding: 50px;
+@media (min-width: 768px) {
+  .flex-grid {
+    .flex-grid--item {
+      .flex-basis(49%);
+      order: initial;
+    }
+  }
 }
