@@ -7,9 +7,9 @@
 
   .flex-grid--item {
     .flex-basis(100%);
+    .flex-order(2);
     background-color: @flex-grix-bg-color;
     overflow: hidden; // used to hide the image on zoom.
-    order: 2;
 
     img {
       .transition(all .5s);
@@ -34,7 +34,7 @@
   }
 
   .first-on-mobile {
-    order: 1;
+    .flex-order(1);
   }
 }
 
@@ -42,7 +42,7 @@
   .flex-grid {
     .flex-grid--item {
       .flex-basis(49%);
-      order: initial;
+      .flex-order(1); // flex order initial doesn't work in IE. 
     }
   }
 }
