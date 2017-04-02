@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Grid Image Zoom Effect</title>
+    <link rel="stylesheet" href="dist/main.min.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Goal</h1>
+    - Flexbox grid where flex items have a background image
+    - By using flexbox it is assured that items that fit in a row will have the same height without using javaScript
+    - By using background-size: cover we make sure the image will always span to the full width of the copy content
+    - Con:
+    - No usage of image srcset to save on performance
+    - Not as good for SEO as the image can't be given the proper values so a duplicate image property or meta
+      tag has to be added.
+
+    <h2>Demo</h2>
+
+    <!-- flex-grid only needed 'per row on desktop' if image needs to be listed first on mobile -->
+    <div class="flex-grid">
+        <div class="flex-grid--item flex-grid--item-image" style="background-image:url('https://placehold.it/1250x350/E8117F/ffffff')">
+            <div class="flex-grid-item--content">
+                <h2>Flex grid item 1</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean
+                    massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec
+                    quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+                </p>
+            </div>
+        </div>
+
+        <div class="flex-grid--item flex-grid--item-image" style="background-image:url('https://placehold.it/1250x350/E8117F/ffffff')">
+            <div class="flex-grid-item--content">
+                <h2>Flex grid item 2</h2>
+                <p>Some copy 2</p>
+            </div>
+        </div>
+
+        <div class="flex-grid--item">
+            <div class="flex-grid-item--content">
+                <h2>Flex grid item 3</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean
+                    massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec
+                    quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+                </p>
+            </div>
+        </div>
+
+        <div class="flex-grid--item flex-grid--item-image" style="background-image:url('https://placehold.it/1250x350/E8117F/ffffff')">
+            <div class="flex-grid-item--content">
+                <h2>Flex grid item 4</h2>
+                <p>Some copy 4</p>
+                <p>Some copy 4</p>
+                <p>Some copy 4</p>
+            </div>
+        </div>
+
+        <div class="flex-grid--item flex-grid--item-image" style="background-image:url('https://placehold.it/350x350/E8117F/ffffff')">
+            <div class="flex-grid-item--content">
+                <h2>Test 5</h2>
+                <p>Some copy 5</p>
+            </div>
+        </div>
+
+        <div class="flex-grid--item">
+            <div class="flex-grid-item--content">
+                <h2>Flex grid item 6</h2>
+                <p>
+                    Lorem ipsum
+                </p>
+                <p>
+                    Lorem ipsum
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex-grid">
+        <div class="flex-grid--item">
+            <div class="flex-grid-item--content">
+                <h2>Flex grid item 7</h2>
+                <p>
+                    Will be listed 2nd on mobile
+                </p>
+            </div>
+        </div>
+
+        <div class="flex-grid--item flex-grid--item-image first-on-mobile" style="background-image:url('https://placehold.it/1250x350/E8117F/ffffff')">
+            <div class="flex-grid-item--content">
+                <h2>Test 8</h2>
+                <p>Will be listed first on mobile</p>
+            </div>
+        </div>
+
+        <div class="flex-grid--item">
+            <div class="flex-grid-item--content">
+                <h2>Flex grid item 9</h2>
+                <p>
+                    Flex grid item 9
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

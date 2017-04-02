@@ -21,22 +21,27 @@
     - usage of transform will make use of hardware acceleration which will make the animation look smooth
 
     <h2>Demo</h2>
-    <!-- flex-grid only needed 'per row on desktop' if image needs to be listed first on mobile -->
+    <!-- ITEM  1: Copy left, image right -->
     <div class="flex-grid">
         <div class="flex-grid--item">
             <div class="flex-grid-item--content">
-                <h2>Flex grid item</h2>
+                <h2>Flex grid item 1</h2>
                 <p>
-                    Flex grid item 1
+                    The following image will be listed first on mobile
                 </p>
             </div>
         </div>
 
+        <!-- Add first-on-mobile if the order of the image has to come first on mobile -->
+        <!-- Note: This only works if only 2 items will be wrapped within teh flex-grid -->
         <div class="flex-grid--item flex-grid--image first-on-mobile">
             <img src="https://placehold.it/1250x350/E8117F/ffffff" alt="Item">
         </div>
     </div>
+    <!-- ITEM  1: Copy left, image right -->
 
+
+    <!-- ITEM  2: Copy right, image left -->
     <div class="flex-grid">
         <div class="flex-grid--item flex-grid--image">
             <img src="https://placehold.it/350x350/E8117F/ffffff" alt="Item">
@@ -44,20 +49,23 @@
 
         <div class="flex-grid--item">
             <div class="flex-grid-item--content">
-                <h2>Flex grid item</h2>
+                <h2>Flex grid item 4</h2>
                 <p>
-                    Flex grid item 2
+                    Flex grid item 4
                 </p>
             </div>
         </div>
     </div>
+    <!-- ITEM  2: Copy right, image left -->
 
+
+    <!-- ITEM  3: Copy left, image right -->
     <div class="flex-grid">
-        <div class="flex-grid--item second-on-mobile">
+        <div class="flex-grid--item">
             <div class="flex-grid-item--content">
-                <h2>Flex grid item</h2>
+                <h2>Flex grid item 5</h2>
                 <p>
-                    Flex grid item 3
+                    The following image will be listed first on mobile
                 </p>
             </div>
         </div>
@@ -68,13 +76,14 @@
 
         <div class="flex-grid--item">
             <div class="flex-grid-item--content">
-                <h2>Flex grid item</h2>
+                <h2>Flex grid item 7</h2>
                 <p>
-                    Flex grid item 4
+                    Flex grid item 7
                 </p>
             </div>
         </div>
     </div>
+    <!-- ITEM  3: Copy left, image right -->
 </div>
 </body>
 </html>

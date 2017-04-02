@@ -1,0 +1,17 @@
+.flex-grid--item {
+  img {
+    .transition(all .5s);
+
+    &:hover,
+    &:focus {
+      transform: scale(1.2);
+    }
+  }
+}
+
+.flex-grid--image {
+  .align-items(center); // align vertical
+  .display-flex();
+  .flex-direction(column);
+  .justify-content(center); // align horizontal
+}

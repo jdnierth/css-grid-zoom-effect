@@ -1,3 +1,6 @@
+// Basic flex box grid
+// One setting to toggle a flex item on the right hand side to be listed first on mobile
+// Note: In order for this to work only 2 flex-items can be wrapped within flex-grid.
 .flex-grid {
   @flex-grid-bg-color: #000;
 
@@ -8,23 +11,7 @@
     .flex-basis(100%);
     .flex-order(2);   // Only needed where image is listed 2nd on desktop and needs to be listed first on mobile
     background-color: @flex-grid-bg-color;
-    overflow: hidden; // used to hide the image on zoom.
-
-    img {
-      .transition(all .5s);
-
-      &:hover,
-      &:focus {
-        transform: scale(1.2);
-      }
-    }
-  }
-
-  .flex-grid--image {
-    .align-items(center); // align vertical
-    .display-flex();
-    .flex-direction(column);
-    .justify-content(center); // align horizontal
+    overflow: hidden; // used to hide the overflowing parts of the zoomed in image on hover.
   }
 
   .flex-grid-item--content {
